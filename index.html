@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street Couture</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .product-gallery img {
+            width: 100px;
+            height: auto;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .size-options .btn {
+            margin-right: 10px;
+        }
+        .custom-container {
+            background-color: #138D75; 
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Street Couture</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Recien llegados</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ropa
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Playeras</a></li>
+                <li><a class="dropdown-item" href="#">Sudaderas</a></li>
+                <li><a class="dropdown-item" href="#">Calcetas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Accesorios
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Gorras</a></li>
+                <li><a class="dropdown-item" href="#">Lentes</a></li>
+                <li><a class="dropdown-item" href="#">Mochila</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="Busca aqui tu producto" placeholder="Busca aqui tu producto" aria-label="Busca aqui tu producto">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="mainImage" src="img/PlayeraNegra.png" alt="Playera" class="product-image">
+                <div class="d-flex mt-3 product-gallery">
+                    <img src="img/PlayeraNegra.png" alt="Playera 1" onclick="changeImage(this)">
+                    <img src="img/N.png" alt="Playera 1" onclick="changeImage(this)">
+                    <img src="img/E.png" alt="Playera 2" onclick="changeImage(this)">
+                    <img src="img/G.png" alt="Playera 3" onclick="changeImage(this)">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>Playera Catzilla</h1>
+                <h2>$250.00</h2>
+                <p><strong>Talla:</strong></p>
+                <div class="size-options mb-3">
+                    <button class="btn btn-outline-secondary">Chica</button>
+                    <button class="btn btn-outline-secondary">Mediana</button>
+                    <button class="btn btn-outline-secondary">Grande</button>
+                    <button class="btn btn-outline-secondary">Extra Grande</button>
+                </div>
+                <a href="https://buy.stripe.com/test_6oEeVHc8d9ITaT64gh" class="btn btn-primary btn-lg">Comprar Ahora</a>
+                <div>
+                    <h5>Descripción</h5>
+                    <p>Playera manga corta con cuello redondo y corte recto</p>
+                    <p>100% Algodón Peinado</p>
+                </div>
+                <div>
+                    <h5>Guía de Tallas</h5>
+                    <p>Consulta nuestra guía de tallas para encontrar tu ajuste perfecto.</p>
+                    <img src="img/tallas.png" alt="Tabla de Tallas">
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <h3>También te puede gustar</h3>
+            <div class="card-group">
+              <div class="card">
+                <img src="img/Car1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Playera Fake New Black</h5>
+                  <p class="card-text">$280</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/Car2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Playera Jason Black</h5>
+                  <p class="card-text">$299</p>
+                </div>
+              </div>
+              <div class="card">
+                <img src="img/Car3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Playera As Above As Below Vino </h5>
+                  <p class="card-text">$275</p>
+                </div>
+              </div>
+            </div>
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3">
+            © 2023
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src;
+        }
+    </script>
+</body>
+</html>
+
